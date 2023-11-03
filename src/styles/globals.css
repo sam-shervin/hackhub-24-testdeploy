@@ -25,3 +25,13 @@ body {
     )
     rgb(var(--background-start-rgb));
 }
+
+@font-face {
+  font-family: "Glitch";
+  src: url("../fonts/glitchside.otf");
+}
+
+.background-polka {
+  background-image: url("../assets/polkabg.png");
+  background-blend-mode: overlay;
+}
