@@ -18,6 +18,7 @@ export default function Home() {
       className="min-h-screen flex flex-col items-center justify-center background-polka"
       initial="initial"
       animate="animate"
+      // @ts-ignore
       variants={loadingAnimation}
     >
       <motion.main className="font-glitch text-[10rem] sm:text-6xl md:text-8xl flex gap-4">
@@ -28,6 +29,7 @@ export default function Home() {
       </motion.main>
       <motion.p
         className="text-white font-glitch text-4xl mt-4"
+        // @ts-ignore
         variants={comingSoonAnimation}
       >
         Coming Soon
