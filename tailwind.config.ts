@@ -13,6 +13,9 @@ const config: Config = {
       },
       fontFamily: {
         "glitch": ["Glitch", "sans-serif"],
+        "offbittrial": ["OffBitTrial", "sans-serif"],
+        "offbittrialdot": ["OffBitTrialDot", "sans-serif"],
+        
       },
       screens: {
         sm: {

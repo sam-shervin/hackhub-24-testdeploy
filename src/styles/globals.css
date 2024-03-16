@@ -31,6 +31,16 @@ body {
   src: url("../fonts/glitchside.otf");
 }
 
+@font-face {
+  font-family: "OffbitTrialDot";
+  src: url("../fonts/OffBitTrial-DotBold.woff");
+}
+
+@font-face {
+  font-family: "OffbitTrial";
+  src: url("../fonts/OffBitTrial-Bold.woff");
+}
+
 .background-polka {
   background-image: url("../assets/polkabg.png");
   background-blend-mode: overlay;
