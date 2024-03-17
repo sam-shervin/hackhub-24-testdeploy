@@ -45,3 +45,10 @@ body {
   background-image: url("../assets/polkabg.png");
   background-blend-mode: overlay;
 }
+
+.gradient-text {
+      background-image: linear-gradient(to right, #CF1259, #7161EF);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
