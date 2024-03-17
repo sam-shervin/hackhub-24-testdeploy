@@ -1,7 +1,16 @@
-import '@hackhub/styles/globals.css'
-import "@hackhub/styles/shadows.css"
-import type { AppProps } from 'next/app'
+import Navbar from "@hackhub/components/header";
+import "@hackhub/styles/globals.css";
+import "@hackhub/styles/shadows.css";
+import type { AppProps } from "next/app";
+import { useRouter } from "next/router";
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  const buttons = ["Team", "Project", "Contacts", "Events", "Blogs"];
+  const router = useRouter();
+  return (
+    <>
+      <Navbar buttons={buttons} active={router.pathname} />
+      <Component {...pageProps} />
+    </>
+  );
 }
