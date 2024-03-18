@@ -33,12 +33,17 @@ body {
 
 @font-face {
   font-family: "OffbitTrialDot";
-  src: url("../fonts/OffBitTrial-DotBold.woff");
+  src: url("../fonts/Offbittrial//OffBitTrial-DotBold.woff");
+}
+
+@font-face {
+  font-family: "OffbitTrialBold";
+  src: url("../fonts/Offbittrial/OffBitTrial-101Bold.woff");
 }
 
 @font-face {
   font-family: "OffbitTrial";
-  src: url("../fonts/OffBitTrial-Bold.woff");
+  src: url("../fonts/Offbittrial/OffBitTrial-101.woff");
 }
 
 .background-polka {
