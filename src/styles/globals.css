@@ -60,6 +60,8 @@ body {
 
 #underlineGradient {
 	height: 1px;
+	margin-left: 3px;
+	margin-right: 3px;
 	background: linear-gradient(90deg, #cf1259 2.29%, #7161ef 98.62%);
 	border-radius: 50px;
 }

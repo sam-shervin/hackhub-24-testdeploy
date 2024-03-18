@@ -64,7 +64,7 @@ const Footer = () => {
 							Contacts
 						</a>
 					</div>
-					<div className="mt-3 w-full lg:w-3/12 pl-4 order-2 lg:order-3">
+					<div className="mt-3 w-full lg:w-3/12 order-2 lg:order-3">
 						<div className="text-lg lg:text-base text-white inline-block mb-3">
 							Address
 							<div id="underlineGradient" />
@@ -73,9 +73,10 @@ const Footer = () => {
 							href="https://goo.gl/maps/C9UE9JLWnBAfQPKe7"
 							target="_blank"
 							rel="noreferrer"
-							className="my-3 block text-white hover:text-gray-200 text-base lg:text-sm lg:pr-32"
+							className="my-3 block text-white hover:text-gray-200 text-base lg:text-sm lg:pr-16"
 						>
-							Kelambakkam - Vandalur Rd, Rajan Nagar, Chennai, Tamil Nadu 600127
+							Kelambakkam - Vandalur Rd, Rajan Nagar, Chennai, Tamil Nadu -
+							600127
 						</a>
 						<br />
 						<div className="text-lg lg:text-base text-white inline-block mb-3">
@@ -92,7 +93,7 @@ const Footer = () => {
 						</a>
 					</div>
 					<div className="mt-3 w-full lg:w-3/12 order-3 lg:order-4">
-						<div className="text-lg lg:text-base text-white inline-block my-4 lg:my-0 lg:mb-10 pl-4 lg:pl-0">
+						<div className="text-lg lg:text-base text-white inline-block lg:my-0 lg:pb-4 pl-6 lg:pl-0">
 							Social Media
 							<div id="underlineGradient" />
 						</div>

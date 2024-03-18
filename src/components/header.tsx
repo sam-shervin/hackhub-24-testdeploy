@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 import * as React from "react";
 
 const Navbar = ({
@@ -11,8 +10,8 @@ const Navbar = ({
 }): JSX.Element => {
 	return (
 		<>
-			<section className="fixed top-0 left-0 w-full bg-inherit shadow-md z-50">
-				<nav className="justify-center flex font-semibold text-[20px]">
+			<section className="top-0 left-0 w-full bg-inherit shadow-md z-50">
+				<nav className="justify-center flex font-normal text-[20px]">
 					<Link href="/">
 						<section
 							className={

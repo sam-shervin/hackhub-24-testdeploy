@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const montserrat = Montserrat({
 	subsets: ["latin"],
-	variable: "--font-monsterrat",
+	variable: "--font-montserrat",
 });
 
 const loadingAnimation = {
@@ -30,15 +30,26 @@ export default function App({ Component, pageProps }: AppProps) {
 	const router = useRouter();
 	return (
 		<>
-			<section className="bg-[#03091E] text-[#EAEAEA] overflow-hidden">
+			<section
+				className={`bg-[#03091E] text-[#EAEAEA] ${montserrat.className}`}
+			>
+				<motion.section
+					initial={{ opacity: 0, scale: 0.8 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						duration: 2,
+						delay: 2,
+						ease: "easeInOut",
+					}}
+				>
+					<Navbar buttons={buttons} active={router.pathname} />
+				</motion.section>
 				<motion.section
 					className="bg-[#03091E]"
 					initial="initial"
 					animate="animate"
 					variants={loadingAnimation}
 				>
-					<Navbar buttons={buttons} active={router.pathname} />
-					<section className="py-8" />
 					<Component {...pageProps} />
 					<Footer />
 				</motion.section>
