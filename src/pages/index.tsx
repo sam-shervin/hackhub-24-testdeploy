@@ -1,5 +1,22 @@
 import Countdown from "@hackhub/components/countdown";
 import { motion } from "framer-motion";
+import { Space_Grotesk, Space_Mono, Montserrat } from "next/font/google";
+
+const spaceGrotesk = Space_Grotesk({
+	subsets: ["latin"],
+	variable: "--font-space-grotesk",
+});
+
+const spaceMono = Space_Mono({
+	subsets: ["latin"],
+	variable: "--font-space-mono",
+	weight: "400",
+});
+
+const montserrat = Montserrat({
+	subsets: ["latin"],
+	variable: "--font-montserrat",
+});
 
 export default function Home() {
 	const loadingAnimation = {
@@ -75,6 +92,27 @@ export default function Home() {
 						seconds={0}
 					/>
 				</motion.section>
+			</motion.section>
+			<motion.section className="min-h-screen grid items-center m-36 font-bold text-[70px] justify-items-start mr-[500px]">
+				<section className={`flex py-4 self-end ${spaceGrotesk.className}`}>
+					<section className="text-[#EAEAEA]">About &nbsp;</section>
+					<section className="text-[#7161EF]">Hack</section>
+					<section className="text-[#CF1259]">Hub</section>
+				</section>
+				<section
+					className={`text-[28px] font-normal self-start ${spaceMono.className}`}
+				>
+					Welcome to IEEE Computer Society VIT Chennai, where innovation meets
+					impact. This event is a vibrant arena for budding technologists,
+					professionals, and students to collaborate, create, and compete in the
+					spirit of advancing technology. As part of IEEE CompSoc's student
+					chapter, our commitment to technological breakouts, our hackathon
+					challenges makes participants think critically and creatively. We
+					provide a platform for you to turn your disruptive ideas into
+					prototypes, and lastly prizes and recognition await. Join us for an
+					exhilarating journey of learning, innovation, and competition. Unleash
+					your potential with IEEE CompSoc.
+				</section>
 			</motion.section>
 		</>
 	);
