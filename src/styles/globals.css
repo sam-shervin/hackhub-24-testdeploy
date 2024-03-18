@@ -31,7 +31,29 @@ body {
   src: url("../fonts/glitchside.otf");
 }
 
+@font-face {
+  font-family: "OffbitTrialDot";
+  src: url("../fonts/Offbittrial//OffBitTrial-DotBold.woff");
+}
+
+@font-face {
+  font-family: "OffbitTrialBold";
+  src: url("../fonts/Offbittrial/OffBitTrial-101Bold.woff");
+}
+
+@font-face {
+  font-family: "OffbitTrial";
+  src: url("../fonts/Offbittrial/OffBitTrial-101.woff");
+}
+
 .background-polka {
   background-image: url("../assets/polkabg.png");
   background-blend-mode: overlay;
 }
+
+.gradient-text {
+      background-image: linear-gradient(to right, #CF1259, #7161EF);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
