@@ -6,12 +6,12 @@ export default function Home() {
 		initial: {
 			opacity: 0,
 			scale: 0.8,
-			transition: { duration: 3, ease: "easeInOut" },
+			transition: { duration: 5, ease: "easeInOut" },
 		},
 		animate: {
 			opacity: 1,
 			scale: 1,
-			transition: { duration: 3, ease: "easeInOut" },
+			transition: { duration: 5, ease: "easeInOut" },
 		},
 	};
 
@@ -39,7 +39,7 @@ export default function Home() {
 				<motion.section className="font-glitch text-[10rem] sm:text-6xl md:text-8xl gap-4 w-screen flex justify-center">
 					<p className="text-[#7161EF] hack-shadow">Hack</p>
 					<p className="text-[#CF1259] hub-shadow">Hub</p>
-					<p className="text-white text-8xl md:text-6xl sm:text-4xl relative top-28 -left-16 my-2 z-2">
+					<p className="text-white text-8xl md:text-6xl sm:text-4xl relative top-28 -left-16 my-2">
 						24
 					</p>
 				</motion.section>

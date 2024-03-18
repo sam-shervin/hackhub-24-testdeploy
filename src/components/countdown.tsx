@@ -62,7 +62,7 @@ export default function Countdown({
 	return (
 		<section>
 			<section className="mt-12 grid grid-rows-2 justify-items-center font-offbittrialbold text-[150px] space-y-[-50px]">
-				<section className="grid grid-cols-4 justify-items-center gap-10">
+				<section className="grid grid-cols-4 justify-items-center gap-16">
 					<p className="">{timeLeft.days}</p>
 					<p>{timeLeft.hours}</p>
 					<p>{timeLeft.minutes}</p>

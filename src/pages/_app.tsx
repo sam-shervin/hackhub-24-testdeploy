@@ -1,17 +1,47 @@
+import Footer from "@hackhub/components/footer";
 import Navbar from "@hackhub/components/header";
 import "@hackhub/styles/globals.css";
 import "@hackhub/styles/shadows.css";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
+import { Montserrat } from "next/font/google";
+import { motion } from "framer-motion";
+
+const montserrat = Montserrat({
+	subsets: ["latin"],
+	variable: "--font-monsterrat",
+});
+
+const loadingAnimation = {
+	initial: {
+		opacity: 0,
+		scale: 0.8,
+		transition: { duration: 3, ease: "easeInOut" },
+	},
+	animate: {
+		opacity: 1,
+		scale: 1,
+		transition: { duration: 3, ease: "easeInOut" },
+	},
+};
 
 export default function App({ Component, pageProps }: AppProps) {
 	const buttons = ["Team", "Project", "Contacts", "Events", "Blogs"];
 	const router = useRouter();
 	return (
 		<>
-			<section className="bg-[#03091E] text-[#EAEAEA]">
-				<Navbar buttons={buttons} active={router.pathname} />
-				<Component {...pageProps} />
+			<section className="bg-[#03091E] text-[#EAEAEA] overflow-hidden">
+				<motion.section
+					className="bg-[#03091E]"
+					initial="initial"
+					animate="animate"
+					variants={loadingAnimation}
+				>
+					<Navbar buttons={buttons} active={router.pathname} />
+					<section className="py-8" />
+					<Component {...pageProps} />
+					<Footer />
+				</motion.section>
 			</section>
 		</>
 	);
