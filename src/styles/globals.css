@@ -3,57 +3,65 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+	--foreground-rgb: 0, 0, 0;
+	--background-start-rgb: 214, 219, 220;
+	--background-end-rgb: 255, 255, 255;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+	:root {
+		--foreground-rgb: 255, 255, 255;
+		--background-start-rgb: 0, 0, 0;
+		--background-end-rgb: 0, 0, 0;
+	}
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+	color: rgb(var(--foreground-rgb));
+	background: linear-gradient(
+			to bottom,
+			transparent,
+			rgb(var(--background-end-rgb))
+		)
+		rgb(var(--background-start-rgb));
 }
 
 @font-face {
-  font-family: "Glitch";
-  src: url("../fonts/glitchside.otf");
+	font-family: "Glitch";
+	src: url("../fonts/glitchside.otf");
 }
 
 @font-face {
-  font-family: "OffbitTrialDot";
-  src: url("../fonts/Offbittrial//OffBitTrial-DotBold.woff");
+	font-family: "OffbitTrialDot";
+	src: url("../fonts/Offbittrial//OffBitTrial-DotBold.woff");
 }
 
 @font-face {
-  font-family: "OffbitTrialBold";
-  src: url("../fonts/Offbittrial/OffBitTrial-101Bold.woff");
+	font-family: "OffbitTrialBold";
+	src: url("../fonts/Offbittrial/OffBitTrial-101Bold.woff");
 }
 
 @font-face {
-  font-family: "OffbitTrial";
-  src: url("../fonts/Offbittrial/OffBitTrial-101.woff");
+	font-family: "OffbitTrial";
+	src: url("../fonts/Offbittrial/OffBitTrial-101.woff");
 }
 
 .background-polka {
-  background-image: url("../assets/polkabg.png");
-  background-blend-mode: overlay;
+	background-image: url("../assets/polkabg.png");
+	background-blend-mode: overlay;
 }
 
 .gradient-text {
-      background-image: linear-gradient(to right, #CF1259, #7161EF);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
+	background-image: linear-gradient(to right, #cb356e, #897bec);
+	-webkit-background-clip: text;
+	background-clip: text;
+	color: transparent;
+}
+
+#underlineGradient {
+	height: 1px;
+	margin-left: 3px;
+	margin-right: 3px;
+	background: linear-gradient(90deg, #cf1259 2.29%, #7161ef 98.62%);
+	border-radius: 50px;
+}
