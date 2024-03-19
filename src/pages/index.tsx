@@ -63,16 +63,16 @@ export default function Home() {
 					}}
 					className="font-glitch text-[10rem] sm:text-6xl md:text-8xl gap-4 w-screen flex justify-center"
 				>
-					<p className="text-[#7161EF] hack-shadow">Hack</p>
-					<p className="text-[#CF1259] hub-shadow">Hub</p>
+					<p className="text-custom_lightblue hack-shadow">Hack</p>
+					<p className="text-custom_red hub-shadow">Hub</p>
 					<p className="text-white text-8xl md:text-6xl sm:text-4xl relative top-28 -left-16 my-2">
 						24
 					</p>
 				</motion.section>
 				<motion.section className="font-offbittrialbold text-[36px] sm:text-6xl md:text-8xl flex gap-4">
-					<p className="text-[#EAEAEA]">IEEE Computer Society's</p>
-					<p className="text-[#CF1259]">FLAGSHIP</p>
-					<p className="text-[#EAEAEA]">Hackathon</p>
+					<p className="text-white">IEEE Computer Society's</p>
+					<p className="text-red">FLAGSHIP</p>
+					<p className="text-white">Hackathon</p>
 				</motion.section>
 				<motion.section
 					initial={{ opacity: 0, scale: 0.2 }}
@@ -95,9 +95,9 @@ export default function Home() {
 			</motion.section>
 			<motion.section className="min-h-screen grid items-center m-36 font-bold text-[70px] justify-items-start mr-[500px]">
 				<section className={`flex py-4 self-end ${spaceGrotesk.className}`}>
-					<section className="text-[#EAEAEA]">About &nbsp;</section>
-					<section className="text-[#7161EF]">Hack</section>
-					<section className="text-[#CF1259]">Hub</section>
+					<section className="text-white">About &nbsp;</section>
+					<section className="text-purple">Hack</section>
+					<section className="text-red">Hub</section>
 				</section>
 				<section
 					className={`text-[28px] font-normal self-start ${spaceMono.className}`}
