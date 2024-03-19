@@ -70,47 +70,47 @@ export default function Home() {
 
 
 					<img
-						src="/x_white_bg.png"
+						src="/x_white_bg.svg"
 						className="absolute left-[12rem] top-[-2rem] w-[10rem]"
 					></img>
 					<img
-						src="/o_left_facing_red.png"
+						src="/o_left_facing_red.svg"
 						className="absolute left-0 top-[-22rem]"
 					></img>
 					<img
-						src="/o_red_whiteborder.png"
+						src="/o_red_whiteborder.svg"
 						className="absolute right-0 w-[10rem]"
 					></img>
 					<img
-						src="/o_red_whiteborder.png"
+						src="/o_red_whiteborder.svg"
 						className="absolute right-0 w-[10rem]"
 					></img>
 					<img
-						src="/o_red_whiteborder.png"
+						src="/o_red_whiteborder.svg"
 						className="absolute right-0 w-[10rem]"
 					></img>
 					<img
-						src="/x_purple_whiteborder.png"
+						src="/x_purple_whiteborder.svg"
 						className="absolute right-[30rem] z-0"
 					></img>
                     <img
-                        src="/dots_purple.png"
+                        src="/dots_purple.svg"
                         className="absolute right-[16rem] top-[-10rem] z-0"
                     ></img>
                     <img
-                        src="/dots_white.png"
+                        src="/dots_white.svg"
                         className="absolute right-[13rem] top-[-12rem] z-0"
                     ></img>
                     <img
-                        src="/left_arrow_purple.png"
+                        src="/left_arrow_purple.svg"
                         className="absolute left-0 bottom-[-4rem] z-0"
                     ></img>
                     <img
-                        src="/right_arrow_white.png"
+                        src="/right_arrow_white.svg"
                         className="absolute left-[5rem] bottom-[-10rem] z-0"
                     ></img>
                     <img
-                        src="/x_purple.png"
+                        src="/x_purple.svg"
                         className="absolute right-[15rem] bottom-[-12rem] w-[6rem] z-0"
                     ></img>
 
