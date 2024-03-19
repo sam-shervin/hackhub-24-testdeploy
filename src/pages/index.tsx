@@ -50,7 +50,7 @@ export default function Home() {
 				animate="animate"
 				variants={loadingAnimation}
 			>
-				<motion.section className="mt-10 font-offbittrialdot text-[75px] sm:text-6xl md:text-8xl gap-4 pr-72 space-y-[-20px] pt-6">
+				<motion.section className="mt-2 font-offbittrialdot text-[4rem] sm:text-6xl md:text-8xl gap-4 pr-72 space-y-[-20px] pt-6">
 					<section className="flex gap-5">
 						<p className="text-left text-[#EAEAEA]">IEEE</p>
 						<p className="text-[#CF1259]"> COMPUTER SOCIETY</p>
@@ -148,14 +148,14 @@ export default function Home() {
 					/>
 				</motion.section>
 			</motion.section>
-			<motion.section className="min-h-screen grid items-center m-36 font-bold text-[70px] justify-items-start mr-[500px]">
+			<motion.section className="min-h-screen grid items-center ml-[1em] font-bold text-[5rem] justify-items-start mr-[5em] mt-[-1em]">
 				<section className={`flex py-4 self-end ${spaceGrotesk.className}`}>
 					<section className="text-white">About &nbsp;</section>
 					<section className="text-purple">Hack</section>
 					<section className="text-red">Hub</section>
 				</section>
 				<section
-					className={`text-[28px] font-normal self-start ${spaceMono.className}`}
+					className={`text-[1.2rem] font-normal self-start ${spaceMono.className}`}
 				>
 					Welcome to IEEE Computer Society VIT Chennai, where innovation meets
 					impact. This event is a vibrant arena for budding technologists,
