@@ -1,6 +1,10 @@
 import Countdown from "@hackhub/components/countdown";
+
 import { motion } from "framer-motion";
 import { Space_Grotesk, Space_Mono, Montserrat } from "next/font/google";
+
+import React from "react";
+
 
 const spaceGrotesk = Space_Grotesk({
 	subsets: ["latin"],
@@ -41,7 +45,7 @@ export default function Home() {
 	return (
 		<>
 			<motion.section
-				className="min-h-screen flex flex-col items-center justify-center bg-[#03091E]"
+				className="min-h-screen w-full flex flex-col items-center justify-center bg-[#03091E] overflow-x-hidden"
 				initial="initial"
 				animate="animate"
 				variants={loadingAnimation}
@@ -61,20 +65,71 @@ export default function Home() {
 						delay: 0.3,
 						ease: "easeInOut",
 					}}
-					className="font-glitch text-[10rem] sm:text-6xl md:text-8xl gap-4 w-screen flex justify-center"
+					className="relative font-glitch text-[10rem] sm:text-6xl md:text-8xl gap-4 w-screen flex justify-center"
 				>
+
+
+					<img
+						src="/x_white_bg.png"
+						className="absolute left-[12rem] top-[-2rem] w-[10rem]"
+					></img>
+					<img
+						src="/o_left_facing_red.png"
+						className="absolute left-0 top-[-22rem]"
+					></img>
+					<img
+						src="/o_red_whiteborder.png"
+						className="absolute right-0 w-[10rem]"
+					></img>
+					<img
+						src="/o_red_whiteborder.png"
+						className="absolute right-0 w-[10rem]"
+					></img>
+					<img
+						src="/o_red_whiteborder.png"
+						className="absolute right-0 w-[10rem]"
+					></img>
+					<img
+						src="/x_purple_whiteborder.png"
+						className="absolute right-[30rem] z-0"
+					></img>
+                    <img
+                        src="/dots_purple.png"
+                        className="absolute right-[16rem] top-[-10rem] z-0"
+                    ></img>
+                    <img
+                        src="/dots_white.png"
+                        className="absolute right-[13rem] top-[-12rem] z-0"
+                    ></img>
+                    <img
+                        src="/left_arrow_purple.png"
+                        className="absolute left-0 bottom-[-4rem] z-0"
+                    ></img>
+                    <img
+                        src="/right_arrow_white.png"
+                        className="absolute left-[5rem] bottom-[-10rem] z-0"
+                    ></img>
+                    <img
+                        src="/x_purple.png"
+                        className="absolute right-[15rem] bottom-[-12rem] w-[6rem] z-0"
+                    ></img>
+
 					<p className="text-custom_lightblue hack-shadow">Hack</p>
-					<p className="text-custom_red hub-shadow">Hub</p>
-					<p className="text-white text-8xl md:text-6xl sm:text-4xl relative top-28 -left-16 my-2">
+					<p className="text-custom_red hub-shadow z-10">Hub</p>
+
+
+					<p className="text-white text-8xl md:text-6xl sm:text-4xl relative top-28 -left-16 my-2 z-20">
 						24
 					</p>
+
+
 				</motion.section>
 				<motion.section className="font-offbittrialbold text-[36px] sm:text-6xl md:text-8xl flex gap-4">
-					<p className="text-white">IEEE Computer Society's</p>
-					<p className="text-red">FLAGSHIP</p>
-					<p className="text-white">Hackathon</p>
+					<p className="text-custom_white">IEEE Computer Society's</p>
+					<p className="text-custom_red">FLAGSHIP</p>
+					<p className="text-custom_white">Hackathon</p>
 				</motion.section>
-				<motion.section
+				<motion.section className="w-full flex justify-center"
 					initial={{ opacity: 0, scale: 0.2 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
