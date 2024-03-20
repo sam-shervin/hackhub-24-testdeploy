@@ -140,9 +140,9 @@ export default function Home() {
 				>
 					<Countdown
 						year={2024}
-						month={3}
-						date={31}
-						hour={8}
+						month={7}
+						date={25}
+						hour={17}
 						minutes={0}
 						seconds={0}
 					/>
