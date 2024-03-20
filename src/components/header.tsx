@@ -15,7 +15,7 @@ const Navbar = ({
 					<Link href="/">
 						<section
 							className={
-								"px-16 py-6 " + `${"/" === active ? "gradient-text" : ""}`
+								"px-12 py-6 " + `${"/" === active ? "gradient-text" : ""}`
 							}
 						>
 							Home
@@ -26,7 +26,7 @@ const Navbar = ({
 						return (
 							<Link href={`/${button}`}>
 								<section
-									className={`px-16 py-6 ${
+									className={`px-12 py-6 ${
 										isHighlighted ? "gradient-text" : ""
 									}`}
 								>
