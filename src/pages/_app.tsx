@@ -26,7 +26,14 @@ const loadingAnimation = {
 };
 
 export default function App({ Component, pageProps }: AppProps) {
-	const buttons = ["Team", "Project", "Contacts", "Events", "Blogs"];
+	const buttons = [
+		"About",
+		"Domains",
+		"Timeline",
+		"Sponsors",
+		"FAQs",
+		"Contact",
+	];
 	const router = useRouter();
 	return (
 		<>

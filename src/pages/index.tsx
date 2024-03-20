@@ -1,14 +1,22 @@
 import Countdown from "@hackhub/components/countdown";
-
 import { motion } from "framer-motion";
-import { Space_Grotesk, Space_Mono, Montserrat } from "next/font/google";
-
+import {
+	Space_Grotesk,
+	Space_Mono,
+	Montserrat,
+	Roboto,
+} from "next/font/google";
 import React from "react";
-
 
 const spaceGrotesk = Space_Grotesk({
 	subsets: ["latin"],
 	variable: "--font-space-grotesk",
+});
+
+const roboto = Roboto({
+	subsets: ["latin"],
+	variable: "--font-space-grotesk",
+	weight: "400",
 });
 
 const spaceMono = Space_Mono({
@@ -50,13 +58,6 @@ export default function Home() {
 				animate="animate"
 				variants={loadingAnimation}
 			>
-				<motion.section className="mt-2 font-offbittrialdot text-[4rem] sm:text-6xl md:text-8xl gap-4 pr-72 space-y-[-20px] pt-6">
-					<section className="flex gap-5">
-						<p className="text-left text-[#EAEAEA]">IEEE</p>
-						<p className="text-[#CF1259]"> COMPUTER SOCIETY</p>
-					</section>
-					<p className="text-left text-[#7161EF]">WELCOMES YOU...</p>
-				</motion.section>
 				<motion.section
 					initial={{ opacity: 0, scale: 0.2 }}
 					animate={{ opacity: 1, scale: 1 }}
@@ -67,12 +68,72 @@ export default function Home() {
 					}}
 					className="relative font-glitch text-[10rem] sm:text-6xl md:text-8xl gap-4 w-screen flex justify-center"
 				>
+					<motion.p
+						initial={{ x: "0vw", y: "0vh", rotate: 0 }}
+						animate={{
+							x: ["-2vw", "2vw", "-2vw"], // Change x values for repeated motion
+							y: ["-2vh", "2vh", "-2vh"], // Adjusted y values for variation
+							rotate: [0, 360],
+							// Adding rotation animation
+						}}
+						transition={{
+							x: {
+								duration: 30, // Increase duration for slower movement
+								yoyo: Infinity,
+								ease: "linear",
 
+								repeat: Infinity,
+							},
+							y: {
+								duration: 5, // Increase duration for slower movement
+								yoyo: Infinity,
+								ease: "easeInOut",
+								repeat: Infinity, // Changed ease for smoother motion
+							},
+							rotate: {
+								duration: 50, // Adjust duration for rotation speed
+								yoyo: Infinity,
+								ease: "linear",
+								repeat: Infinity,
+							},
+						}}
+						className={`${roboto.className} absolute left-[7rem] top-[-12rem] text-[18rem] z-1 gradient-border`}
+					>
+						×
+					</motion.p>
+					<motion.p
+						initial={{ x: "0vw", y: "0vh", rotate: 0 }}
+						animate={{
+							x: ["-2vw", "2vw", "-2vw"], // Change x values for repeated motion
+							y: ["-2vh", "2vh", "-2vh"], // Adjusted y values for variation
+							rotate: [360, 0],
+							// Adding rotation animation
+						}}
+						transition={{
+							x: {
+								duration: 30, // Increase duration for slower movement
+								yoyo: Infinity,
+								ease: "linear",
 
-					<img
-						src="/x_white_bg.svg"
-						className="absolute left-[12rem] top-[-2rem] w-[10rem]"
-					></img>
+								repeat: Infinity,
+							},
+							y: {
+								duration: 5, // Increase duration for slower movement
+								yoyo: Infinity,
+								ease: "easeInOut",
+								repeat: Infinity, // Changed ease for smoother motion
+							},
+							rotate: {
+								duration: 50, // Adjust duration for rotation speed
+								yoyo: Infinity,
+								ease: "linear",
+								repeat: Infinity,
+							},
+						}}
+						className={`${roboto.className} absolute right-[23rem] bottom-[-12rem] text-[12rem] white-border text-custom_lightblue z-0 gradient-border`}
+					>
+						×
+					</motion.p>
 					<img
 						src="/o_left_facing_red.svg"
 						className="absolute left-0 top-[-22rem]"
@@ -89,47 +150,47 @@ export default function Home() {
 						src="/o_red_whiteborder.svg"
 						className="absolute right-0 w-[10rem]"
 					></img>
+
 					<img
-						src="/x_purple_whiteborder.svg"
-						className="absolute right-[30rem] z-0"
+						src="/dots_purple.svg"
+						className="absolute right-[7rem] top-[-4rem] z-0"
 					></img>
-                    <img
-                        src="/dots_purple.svg"
-                        className="absolute right-[16rem] top-[-10rem] z-0"
-                    ></img>
-                    <img
-                        src="/dots_white.svg"
-                        className="absolute right-[13rem] top-[-12rem] z-0"
-                    ></img>
-                    <img
-                        src="/left_arrow_purple.svg"
-                        className="absolute left-0 bottom-[-4rem] z-0"
-                    ></img>
-                    <img
-                        src="/right_arrow_white.svg"
-                        className="absolute left-[5rem] bottom-[-10rem] z-0"
-                    ></img>
-                    <img
-                        src="/x_purple.svg"
-                        className="absolute right-[15rem] bottom-[-12rem] w-[6rem] z-0"
-                    ></img>
+					<img
+						src="/dots_white.svg"
+						className="absolute right-[4rem] top-[-6rem] z-0"
+					></img>
+					<img
+						src="/left_arrow_purple.svg"
+						className="absolute left-0 bottom-[-4rem] z-0"
+					></img>
+					<img
+						src="/right_arrow_white.svg"
+						className="absolute left-[5rem] bottom-[-10rem] z-0"
+					></img>
 
-					<p className="text-custom_lightblue hack-shadow">Hack</p>
+					<p className="text-custom_lightblue hack-shadow z-10">Hack</p>
 					<p className="text-custom_red hub-shadow z-10">Hub</p>
-
 
 					<p className="text-white text-8xl md:text-6xl sm:text-4xl relative top-28 -left-16 my-2 z-20">
 						24
 					</p>
-
-
 				</motion.section>
-				<motion.section className="font-offbittrialbold text-[36px] sm:text-6xl md:text-8xl flex gap-4">
+				<motion.section
+					initial={{ opacity: 0, scale: 0.2 }}
+					animate={{ opacity: 1, scale: 1 }}
+					transition={{
+						duration: 3,
+						delay: 0.3,
+						ease: "easeInOut",
+					}}
+					className="font-offbittrialbold mt-[-30px] text-[30px] mr-24 sm:text-6xl md:text-8xl flex gap-4"
+				>
 					<p className="text-custom_white">IEEE Computer Society's</p>
 					<p className="text-custom_red">FLAGSHIP</p>
 					<p className="text-custom_white">Hackathon</p>
 				</motion.section>
-				<motion.section className="w-full flex justify-center"
+				<motion.section
+					className="w-full flex justify-center"
 					initial={{ opacity: 0, scale: 0.2 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
@@ -140,9 +201,9 @@ export default function Home() {
 				>
 					<Countdown
 						year={2024}
-						month={3}
-						date={31}
-						hour={8}
+						month={7}
+						date={25}
+						hour={17}
 						minutes={0}
 						seconds={0}
 					/>
