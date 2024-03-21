@@ -21,6 +21,7 @@ const config: Config = {
 				offbittrialbold: ["OffBitTrialBold", "sans-serif"],
 				offbittrial: ["OffBitTrial", "sans-serif"],
 				offbittrialdot: ["OffBitTrialDot", "sans-serif"],
+                opensans: ["Open Sans", "sans-serif"]
 			},
 			screens: {
 				sm: {
