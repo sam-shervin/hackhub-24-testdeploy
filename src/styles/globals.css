@@ -16,6 +16,10 @@
 	}
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
 	color: rgb(var(--foreground-rgb));
 	background: linear-gradient(
@@ -24,6 +28,12 @@ body {
 			rgb(var(--background-end-rgb))
 		)
 		rgb(var(--background-start-rgb));
+}
+
+
+@font-face {
+	font-family: "Open Sans";
+  src: url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap')
 }
 
 @font-face {
@@ -64,4 +74,16 @@ body {
 	margin-right: 3px;
 	background: linear-gradient(90deg, #cf1259 2.29%, #7161ef 98.62%);
 	border-radius: 50px;
+}
+
+.gradient-border {
+	background: linear-gradient(90deg, #cf1259 2.29%, #7161ef 98.62%);
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 6px transparent;
+}
+
+.white-border {
+	background: #ffff;
+	-webkit-background-clip: text;
+	-webkit-text-stroke: 6px transparent;
 }
