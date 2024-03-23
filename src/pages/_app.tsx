@@ -6,6 +6,7 @@ import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { Montserrat } from "next/font/google";
 import { motion } from "framer-motion";
+import { useEffect, useState } from 'react';
 
 const montserrat = Montserrat({
 	subsets: ["latin"],
@@ -27,6 +28,7 @@ const loadingAnimation = {
 
 export default function App({ Component, pageProps }: AppProps) {
 	const buttons = [
+        "Home",
 		"About",
 		"Domains",
 		"Timeline",
@@ -34,13 +36,14 @@ export default function App({ Component, pageProps }: AppProps) {
 		"FAQs",
 		"Contact",
 	];
-	const router = useRouter();
+
 	return (
 		<>
 			<section
-				className={`bg-[#03091E] text-[#EAEAEA] ${montserrat.className}`}
+				className={`bg-[#03091E] text-[#EAEAEA] ${montserrat.className} scroll-smooth`}
 			>
 				<motion.section
+                className="fixed bg-[#03091E] bg-opacity-50 w-full z-[100]"
 					initial={{ opacity: 0, scale: 0.8 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
@@ -49,7 +52,7 @@ export default function App({ Component, pageProps }: AppProps) {
 						ease: "easeInOut",
 					}}
 				>
-					<Navbar buttons={buttons} active={router.pathname} />
+					<Navbar buttons={buttons} />
 				</motion.section>
 				<motion.section
 					className="bg-[#03091E]"
