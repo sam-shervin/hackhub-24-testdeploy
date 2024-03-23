@@ -12,56 +12,59 @@ import devto from "../assets/socialmedia/devto.png";
 const Footer = () => {
 	return (
 		<div className="relative z-0 mx-32">
-			<section className="h-0.5 bg-gradient-to-r from-[#CF1259] to-[#7161EF] my-4 " />
+			<section
+				id="contact"
+				className="h-0.5 bg-gradient-to-r from-[#CF1259] to-[#7161EF] my-4 "
+			/>
 			<footer className="font-montserrat">
-				<div className="pb-6 text-gray-800 flex flex-wrap justify-left text-left items-center">
-					<div className="pt-8 lg:pt-4 w-11/12 lg:mx-0 sm:w-2/3 lg:w-3/12 order-4 lg:order-1">
+				<div className="pb-6 text-gray-800 flex flex-wrap lg:flex-nowrap justify-left text-left items-center">
+					<div className="pt-8 lg:pt-4 w-11/12 sm:w-2/3 lg:w-[30rem] order-4 lg:order-1">
 						<img
 							src={comsocLogowhite.src}
 							alt="IEEE CS VITC Logo"
-							className="ml-4 lg:ml-20"
+							className="items-center justify-center"
 						/>
 					</div>
-					<div className="mt-3 w-full lg:w-3/12 py-6 lg:py-0 pl-28 hidden lg:block order-1 lg:order-2">
+					<div className="mt-3 w-full lg:w-3/12 py-6 lg:py-0 hidden lg:block order-1 lg:order-2">
 						<div className="text-lg lg:text-base text-white inline-block mb-3">
 							Menu
 							<div id="underlineGradient" />
 						</div>
 						<a
-							href="/"
+							href="#"
 							className="my-3 block text-white hover:text-gray-200 text-sm"
 						>
 							Home
 						</a>
 						<a
-							href="/Team"
+							href="#about"
 							className="my-3 block text-white hover:text-gray-200 text-sm"
 						>
-							The Team
+							About
 						</a>
 						<a
-							href="/Events"
+							href="#domains"
 							className="my-3 block text-white hover:text-gray-200 text-sm"
 						>
-							Events
+							Domains
 						</a>
 						<a
-							href="/Project"
+							href="#timeline"
 							className="my-3 block text-white hover:text-gray-200 text-sm"
 						>
-							Project
+							Timeline
 						</a>
 						<a
-							href="/Blogs"
+							href="#sponsors"
 							className="my-3 block text-white hover:text-gray-200 text-sm"
 						>
-							Blogs
+							Sponsors
 						</a>
 						<a
-							href="/Contacts"
+							href="#faqs"
 							className="my-3 block text-white hover:text-gray-200 text-sm"
 						>
-							Contacts
+							FAQs
 						</a>
 					</div>
 					<div className="mt-3 w-full lg:w-3/12 order-2 lg:order-3">

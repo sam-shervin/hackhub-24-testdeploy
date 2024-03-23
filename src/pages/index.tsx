@@ -1,4 +1,9 @@
 import Countdown from "@hackhub/components/countdown";
+import FAQ from "@hackhub/components/pages/FAQ";
+import About from "@hackhub/components/pages/about";
+import Domain from "@hackhub/components/pages/domains";
+import Sponsors from "@hackhub/components/pages/sponsors";
+import Timeline from "@hackhub/components/pages/timeline";
 import { motion } from "framer-motion";
 import {
 	Space_Grotesk,
@@ -66,7 +71,7 @@ export default function Home() {
 					initial={{ opacity: 0, y: "0vh", rotate: 90 }}
 					animate={{
 						opacity: [1, 0.7, 0.3, 0.5, 0, 0.5, 0.3, 0.7, 1],
-						y: ["-100vh", "100vh"],
+						y: ["-100vh", "500vh"],
 					}} // Animate opacity from 1 to 0
 					transition={{
 						duration: 0.2,
@@ -81,7 +86,7 @@ export default function Home() {
 					}}
 					src="/right_arrow_white.svg"
 					className="absolute left-[1rem] bottom-[-10rem] z-0 rotate-90"
-				></motion.img>
+				/>
 				<motion.section
 					initial={{ opacity: 0, scale: 0.2 }}
 					animate={{ opacity: 1, scale: 1 }}
@@ -399,80 +404,11 @@ export default function Home() {
 					className="absolute top-[-8rem] w-[14rem] z-0"
 				></motion.img>
 
-				<motion.p
-					initial={{ x: "0vw", y: "0vh", rotate: 0 }}
-					animate={{
-						x: ["2vw", "-2vw", "2vw"],
-					}}
-					transition={{
-						x: {
-							duration: 5, // Increase duration for slower movement
-							yoyo: Infinity,
-							ease: "easeInOut",
-							repeat: Infinity, // Changed ease for smoother motion
-						},
-					}}
-					className="font-opensans font-black absolute text-[10rem] right-[50rem] w-fit p-4 bottom-[-11rem] white-border text-custom_lightblue"
-				>
-					◯
-				</motion.p>
-
-				<div className="w-[70%] ml-24 p-4 z-10">
-					<section className={`flex py-4 ${spaceGrotesk.className}`}>
-						<section className="text-custom_white">About &nbsp;</section>
-						<section className="text-custom_purple">Hack</section>
-						<section className="text-custom_red">Hub</section>
-					</section>
-
-					<section
-						className={`text-[1.2rem] font-normal self-start ${spaceMono.className}`}
-					>
-						Welcome to IEEE Computer Society VIT Chennai, where innovation meets
-						impact. This event is a vibrant arena for budding technologists,
-						professionals, and students to collaborate, create, and compete in
-						the spirit of advancing technology. As part of IEEE CompSoc's
-						student chapter, our commitment to technological breakouts, our
-						hackathon challenges makes participants think critically and
-						creatively. We provide a platform for you to turn your disruptive
-						ideas into prototypes, and lastly prizes and recognition await. Join
-						us for an exhilarating journey of learning, innovation, and
-						competition. Unleash your potential with IEEE CompSoc.
-					</section>
-				</div>
-			</motion.section>
-
-			{/* DOMAINS */}
-			<motion.section
-				id="domains"
-				className="relative mt-10 w-full flex py-20 font-bold text-[5rem] min-h-screen"
-			>
-				<motion.img
-					initial={{ opacity: 1 }}
-					animate={{ opacity: [1, 0.7, 0.3, 0.5, 0, 0.5, 0.3, 0.7, 1] }} // Animate opacity from 1 to 0
-					transition={{ duration: 1, repeat: Infinity, yoyo: Infinity }} // Set transition duration and repeat infinitely
-					src="/dots_full_red.svg"
-					className="absolute left-[0rem] top-[0rem] w-[18rem] z-0"
-				></motion.img>
-				<motion.img
-					initial={{ opacity: 1 }}
-					animate={{ opacity: [1, 0.7, 0.3, 0.5, 0, 0.5, 0.3, 0.7, 1] }} // Animate opacity from 1 to 0
-					transition={{ duration: 0.8, repeat: Infinity, yoyo: Infinity }} // Set transition duration and repeat infinitely
-					src="/dots_full_white.svg"
-					className="absolute left-[3rem] top-[-4rem] w-[22rem] z-0"
-				></motion.img>
-
-				<div className="p-4 flex flex-col w-[80%] mx-auto items-center justify-center z-10">
-					<section className={`flex py-4 ${spaceGrotesk.className}`}>
-						<section className="text-custom_white">
-							Domains of the Hackathon
-						</section>
-					</section>
-					<section
-						className={`text-[1.2rem] font-normal self-start ${spaceMono.className}`}
-					>
-						ADD DOMAINS
-					</section>
-				</div>
+				<About />
+				<Domain />
+				<Timeline />
+				<Sponsors />
+				<FAQ />
 			</motion.section>
 		</>
 	);
