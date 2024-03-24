@@ -15,7 +15,7 @@ const spaceMono = Space_Mono({
 export default function About(): JSX.Element {
 	return (
 		<>
-			<div className="w-[70%] ml-24 p-4 z-10">
+			<div className="w-[70%] ml-24 pb-24 p-12 z-10 backdrop-blur-sm rounded-[3rem]">
 				<section className={`flex py-4 ${spaceGrotesk.className}`}>
 					<section className="text-custom_white">About &nbsp;</section>
 					<section className="text-custom_purple">Hack</section>
