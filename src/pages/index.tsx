@@ -403,6 +403,10 @@ export default function Home() {
 				></motion.img>
 
 				<About />
+				<Domain />
+				<Timeline />
+				<Sponsors />
+				<FAQ />
 			</motion.section>
 		</>
 	);
