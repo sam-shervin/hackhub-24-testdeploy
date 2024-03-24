@@ -65,20 +65,24 @@ export default function Countdown({
 				<section className="flex justify-center text-7xl gap-16 mt-20 ">
 					<div className="flex flex-col items-center">
 						<p className="text-9xl">{timeLeft.days}</p>
-						<p className="text-custom_red font-offbittrial">days</p>
+						<p className="text-custom_red font-offbittrial text-6xl">days</p>
 					</div>
 
 					<div className="flex flex-col items-center">
 						<p className="text-9xl">{timeLeft.hours}</p>
-						<p className="text-custom_lightblue font-offbittrial">hours</p>
+						<p className="text-custom_lightblue font-offbittrial text-6xl">
+							hours
+						</p>
 					</div>
 					<div className="flex flex-col items-center">
 						<p className="text-9xl">{timeLeft.minutes}</p>
-						<p className="text-custom_white font-offbittrial">minutes</p>
+						<p className="text-custom_white font-offbittrial text-6xl">
+							minutes
+						</p>
 					</div>
 					<div className="flex flex-col items-center">
 						<p className="text-9xl">{timeLeft.seconds}</p>
-						<p className="text-custom_red font-offbittrial">seconds</p>
+						<p className="text-custom_red font-offbittrial text-6xl">seconds</p>
 					</div>
 				</section>
 			</section>
