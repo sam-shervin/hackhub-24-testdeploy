@@ -1,7 +1,11 @@
 .hack-shadow {
-    text-shadow: 10px 10px 40px #957FEF;
+	text-shadow: 10px 10px 40px #957fef;
 }
 
 .hub-shadow {
-    text-shadow: 10px 10px 40px #CF1259;
+	text-shadow: 10px 10px 40px #cf1259;
+}
+
+.about-shadow {
+	text-shadow: 10px 10px 40px #ffffff99;
 }

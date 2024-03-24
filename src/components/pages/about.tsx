@@ -17,13 +17,19 @@ export default function About(): JSX.Element {
 		<>
 			<div className="w-[70%] ml-24 pb-24 p-12 z-10 backdrop-blur-sm rounded-[3rem]">
 				<section className={`flex py-4 ${spaceGrotesk.className}`}>
-					<section className="text-custom_white">About &nbsp;</section>
-					<section className="text-custom_purple">Hack</section>
-					<section className="text-custom_red">Hub</section>
+					<section className="text-custom_white font-glitch about-shadow mr-8">
+						About
+					</section>
+					<section className="text-custom_purple font-glitch hack-shadow">
+						Hack
+					</section>
+					<section className="text-custom_red font-glitch hub-shadow">
+						Hub
+					</section>
 				</section>
 
 				<section
-					className={`text-[1.2rem] font-normal self-start ${spaceGrotesk.className}`}
+					className={`text-[1.5rem] font-normal font-offbittrial self-start `}
 				>
 					Welcome to IEEE Computer Society VIT Chennai, where innovation meets
 					impact. This event is a vibrant arena for budding technologists,
