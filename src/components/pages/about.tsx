@@ -23,7 +23,7 @@ export default function About(): JSX.Element {
 				</section>
 
 				<section
-					className={`text-[1.2rem] font-normal self-start ${spaceMono.className}`}
+					className={`text-[1.2rem] font-normal self-start ${spaceGrotesk.className}`}
 				>
 					Welcome to IEEE Computer Society VIT Chennai, where innovation meets
 					impact. This event is a vibrant arena for budding technologists,

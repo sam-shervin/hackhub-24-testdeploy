@@ -69,7 +69,7 @@ export default function FAQ(): JSX.Element {
 								key={index}
 							>
 								<section
-									className="text-[2rem] font-normal flex justify-between"
+									className="text-[2.1rem] font-normal flex justify-between"
 									onClick={() => toggleTopic(index)}
 								>
 									<section>{faq.topic}</section>
