@@ -62,7 +62,7 @@ export default function Home() {
 
 			<motion.section
 				id="home"
-				className="min-h-screen w-full flex flex-col items-center justify-center bg-[#03091E] overflow-x-hidden scroll-smooth"
+				className="min-h-screen w-screen flex flex-col items-center justify-center bg-[#03091E] overflow-x-hidden scroll-smooth"
 				initial="initial"
 				animate="animate"
 				variants={loadingAnimation}
@@ -71,7 +71,7 @@ export default function Home() {
 					initial={{ opacity: 0, y: "0vh", rotate: 90 }}
 					animate={{
 						opacity: [1, 0.7, 0.3, 0.5, 0, 0.5, 0.3, 0.7, 1],
-						y: ["-100vh", "500vh"],
+						y: ["-20vh", "500vh"],
 					}} // Animate opacity from 1 to 0
 					transition={{
 						duration: 0.2,
@@ -85,7 +85,7 @@ export default function Home() {
 						},
 					}}
 					src="/right_arrow_white.svg"
-					className="absolute left-[1rem] bottom-[-10rem] z-0 rotate-90"
+					className="sm:hidden absolute left-[1rem] bottom-[-10rem] z-0 rotate-90"
 				/>
 				<motion.section
 					initial={{ opacity: 0, scale: 0.2 }}
@@ -403,10 +403,6 @@ export default function Home() {
 				></motion.img>
 
 				<About />
-				<Domain />
-				<Timeline />
-				<Sponsors />
-				<FAQ />
 			</motion.section>
 		</>
 	);
