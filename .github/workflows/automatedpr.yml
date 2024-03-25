@@ -23,6 +23,5 @@ jobs:
             This pull request is automatically created whenever changes are pushed to the `master` branch
           branch: sam-patch
           base: master
-          branch-suffix: pr-${{ github.run_number }}
           # Change the below repository names accordingly
           repository: sam-shervin/hackhub-24-testdeploy
