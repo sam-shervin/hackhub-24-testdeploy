@@ -96,9 +96,6 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 										className={`px-16 py-5 
 									`}
 										id={button}
-										ref={(el) => {
-											buttonRefs.current[button] = el;
-										}}
 									>
 										{button}
 									</section>
@@ -122,12 +119,22 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 						</nav>
 					</>
 				)}
-
 			</section>
 
 			{isRadialNavbarOpen && (
 				<section className="fixed flex flex-col items-center justify-center h-screen w-screen z-40 bg-transparent top-[-5px]">
-					<section className="backdrop-blur-xl shadow-slate-700 border border-[#dbcaca53] shadow-2xl flex flex-col items-center justify-center rounded-2xl py-4 px-8 min-w-screen">
+					<motion.section
+						initial={{ opacity: 0 }}
+						animate={{
+							opacity: 1,
+						}}
+						transition={{
+							duration: 0.2,
+							delay: 0,
+							ease: "easeInOut",
+						}}
+						className="backdrop-blur-xl shadow-slate-700 border border-[#dbcaca53] shadow-2xl flex flex-col items-center justify-center rounded-2xl py-4 px-8 min-w-screen"
+					>
 						{buttons.map((button) => {
 							return (
 								<Link href={`#${button.toLowerCase()}`} key={button}>
@@ -136,16 +143,13 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 										className={`px-16 py-6 
 									`}
 										id={button}
-										ref={(el) => {
-											buttonRefs.current[button] = el;
-										}}
 									>
 										{button}
 									</section>
 								</Link>
 							);
 						})}
-					</section>
+					</motion.section>
 				</section>
 			)}
 			<section className="h-0.5 bg-gradient-to-r from-custom_red to-custom_lightblue" />
