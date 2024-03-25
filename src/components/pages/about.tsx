@@ -30,7 +30,6 @@ export default function About(): JSX.Element {
 					</section>
 				</section>
 
-
 				<section className={`text-[1.5rem] font-normal self-start`}>
 
 					Welcome to IEEE Computer Society VIT Chennai, where innovation meets
