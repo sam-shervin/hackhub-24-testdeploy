@@ -13,8 +13,11 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Pull changes from remote
+    - name: Pull changes from origin (upstream)
       run: git pull origin sam-patch
+
+    - name: Fetch latest changes from remote (hackhub-24-testdeploy)
+      run: git fetch origin
 
     - name: Push to Forked Repository
       run: |
