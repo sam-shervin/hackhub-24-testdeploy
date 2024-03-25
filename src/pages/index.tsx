@@ -282,8 +282,6 @@ export default function Home() {
 					/>
 				</motion.section>
 			</motion.section>
-
-			{/* ABOUT */}
 			<motion.section
 				id="about"
 				className="relative flex flex-col py-20 font-bold text-[5rem]"

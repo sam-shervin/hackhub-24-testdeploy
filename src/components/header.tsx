@@ -74,7 +74,9 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 									className={`px-16 py-5 
 									`}
 									id={button}
-									ref={(el) => (buttonRefs.current[button] = el)}
+									ref={(el) => {
+										buttonRefs.current[button] = el;
+									}}
 								>
 									{button}
 								</section>
