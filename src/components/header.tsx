@@ -119,7 +119,6 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 					</nav>
 					<section className="h-0.5 bg-gradient-to-r from-custom_red to-custom_lightblue" /></>
 				)}
-				
 			</section>
 			
 			{isRadialNavbarOpen && (
