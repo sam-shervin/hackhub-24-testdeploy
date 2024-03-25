@@ -1,21 +1,21 @@
-name: Push to Fork
+name: Push to Forked Repository
 
 on:
   push:
     branches:
-      - sam-patch
+      - sam-patch  # You can specify the branch you want to trigger this workflow for
 
 jobs:
-  build:
+  push_to_forked_repo:
     runs-on: ubuntu-latest
-    
+
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v2
-      
-    - name: Push to Fork
-      uses: ad-m/push-to-fork@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch_to_push: sam-patch
-        fork_branch: sam-shervin/hackhub-24-testdeploy/master
+    - name: Checkout Repository
+      uses: actions/checkout@v2  # This action checks out your repository
+
+    # If needed, set up any environment variables or configurations here
+
+    - name: Push to Forked Repository
+      run: |
+        git remote add hackhub-24-testdeploy https://github.com/sam-shervin/hackhub-24-testdeploy
+        git push hackhub-24-testdeploy sam-patch:master
