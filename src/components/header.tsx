@@ -133,7 +133,7 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 							delay: 0,
 							ease: "easeInOut",
 						}}
-						className="backdrop-blur-xl shadow-slate-700 border border-[#dbcaca53] shadow-2xl flex flex-col items-center justify-center rounded-2xl py-4 px-8 min-w-screen"
+						className="backdrop-blur-xl shadow-slate-600 border border-custom_red shadow-2xl flex flex-col items-center justify-center rounded-2xl py-4 px-8 min-w-screen"
 					>
 						{buttons.map((button) => {
 							return (
