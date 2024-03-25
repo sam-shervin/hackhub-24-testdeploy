@@ -96,7 +96,9 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 										className={`px-16 py-5 
 									`}
 										id={button}
-										ref={(el) => (buttonRefs.current[button] = el)}
+										ref={(el) => {
+											buttonRefs.current[button] = el;
+										}}
 									>
 										{button}
 									</section>
@@ -105,37 +107,47 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 						})}
 					</nav>
 				)}
-				{!isDesktop && (<>
-					<nav className="relative flex justify-end visible lg:hidden z-50">
-						<button className="flex items-center px-4 py-2 rounded-md ">
-							<Image
-								src="/three_bars.svg"
-								alt="Logo"
-								width={24}
-								height={24}
-								onClick={openRadialNavbar}
-							/>
-						</button>
-					</nav>
-					<section className="h-0.5 bg-gradient-to-r from-custom_red to-custom_lightblue" /></>
+				{!isDesktop && (
+					<>
+						<nav className="relative flex justify-end visible lg:hidden z-[100]">
+							<button className="flex items-center px-4 py-2 rounded-md ">
+								<Image
+									src="/three_bars.svg"
+									alt="Logo"
+									width={24}
+									height={24}
+									onClick={openRadialNavbar}
+								/>
+							</button>
+						</nav>
+					</>
 				)}
 			</section>
-			
+
 			{isRadialNavbarOpen && (
-				<motion.div
-					initial={{ opacity: 0, scale: 0.8 }}
-					animate={{ opacity: 1, scale: 1.3 }}
-					transition={{
-						duration: 0.3,
-						delay: 0.1,
-						ease: "easeInOut",
-					}}
-					className="w-screen h-screen bg-gradient-to-r from-[#ffff] to-custom_lightblue opacity-25"
-					
-				>
-					
-				</motion.div>
+				<section className="fixed flex flex-col items-center justify-center h-screen w-screen z-40 bg-transparent top-[-5px]">
+					<section className="backdrop-blur-xl shadow-slate-700 border border-[#dbcaca53] shadow-2xl flex flex-col items-center justify-center rounded-2xl py-4 px-8 min-w-screen">
+						{buttons.map((button) => {
+							return (
+								<Link href={`#${button.toLowerCase()}`} key={button}>
+									<section
+										onClick={openRadialNavbar}
+										className={`px-16 py-6 
+									`}
+										id={button}
+										ref={(el) => {
+											buttonRefs.current[button] = el;
+										}}
+									>
+										{button}
+									</section>
+								</Link>
+							);
+						})}
+					</section>
+				</section>
 			)}
+			<section className="h-0.5 bg-gradient-to-r from-custom_red to-custom_lightblue" />
 		</>
 	);
 };
