@@ -122,6 +122,7 @@ const Navbar = ({ buttons }: { buttons: string[] }): JSX.Element => {
 						</nav>
 					</>
 				)}
+
 			</section>
 
 			{isRadialNavbarOpen && (
