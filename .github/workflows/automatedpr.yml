@@ -1,4 +1,4 @@
-name: Create Pull Request
+name: Push to Fork
 
 on:
   push:
@@ -6,22 +6,16 @@ on:
       - sam-patch
 
 jobs:
-  create_pr:
+  build:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v3
-        with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          commit-message: 'Automated pull request'
-          title: 'Automated pull request'
-          body: |
-            This pull request is automatically created whenever changes are pushed to the `master` branch
-          branch: sam-patch
-          base: master
-          # Change the below repository names accordingly
-          repository: sam-shervin/hackhub-24-testdeploy
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    - name: Push to Fork
+      uses: ad-m/push-to-fork@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        branch_to_push: sam-patch
+        fork_branch: sam-shervin/hackhub-24-testdeploy/master
