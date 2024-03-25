@@ -3,7 +3,7 @@ name: Push to Forked Repository
 on:
   push:
     branches:
-      - sam-patch  # You can specify the branch you want to trigger this workflow for
+      - sam-patch
 
 jobs:
   push_to_forked_repo:
@@ -11,12 +11,12 @@ jobs:
 
     steps:
     - name: Checkout Repository
-      uses: actions/checkout@v2  # This action checks out your repository
+      uses: actions/checkout@v2
 
-    # If needed, set up any environment variables or configurations here
+    - name: Pull changes from remote
+      run: git pull origin sam-patch
 
     - name: Push to Forked Repository
       run: |
-        git pull
         git remote add hackhub-24-testdeploy https://github.com/sam-shervin/hackhub-24-testdeploy
         git push hackhub-24-testdeploy sam-patch:master
