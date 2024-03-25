@@ -64,6 +64,7 @@ export default function FAQ(): JSX.Element {
 					</section>
 					<section className={`${spaceGrotesk.className} ml-[-1rem]`}>
 						{faqs.map((faq, index) => (
+
 							<motion.section
 								initial={{ opacity: 0 }}
 								animate={{ opacity: 1 }}
@@ -86,6 +87,7 @@ export default function FAQ(): JSX.Element {
 									/>
 								</section>
 								{selectedTopic === index && (
+
 									<motion.section
 										initial={{ opacity: 0 }}
 										animate={{

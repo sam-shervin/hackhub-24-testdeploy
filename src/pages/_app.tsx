@@ -1,6 +1,6 @@
 import Footer from "@hackhub/components/footer";
 import Navbar from "@hackhub/components/header";
-import "@hackhub/styles/globals.css";
+	import "@hackhub/styles/globals.css";
 import "@hackhub/styles/shadows.css";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
@@ -43,7 +43,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				className={`bg-[#03091E] text-[#EAEAEA] ${montserrat.className} scroll-smooth overflow-x-hidden overflow-y-hidden`}
 			>
 				<motion.section
-					className="bg-[#03091E] bg-opacity-50 w-full z-50"
+					className="bg-[#03091E] bg-opacity-50 w-full z-40"
 					initial={{ opacity: 0, scale: 0.8 }}
 					animate={{ opacity: 1, scale: 1 }}
 					transition={{
