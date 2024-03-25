@@ -16,5 +16,6 @@ jobs:
     - name: Push to Forked Repository
       run: |
         git checkout sam-patch
+        git pull hackhub-24-testdeploy master
         git remote add hackhub-24-testdeploy https://github.com/sam-shervin/hackhub-24-testdeploy
         git push hackhub-24-testdeploy sam-patch:master
