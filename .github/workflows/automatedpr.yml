@@ -3,7 +3,7 @@ name: Create Pull Request
 on:
   push:
     branches:
-      - master
+      - sam-patch
 
 jobs:
   create_pr:
@@ -21,7 +21,7 @@ jobs:
           title: 'Automated pull request'
           body: |
             This pull request is automatically created whenever changes are pushed to the `master` branch
-          branch: master
+          branch: sam-patch
           base: master
           branch-suffix: pr-${{ github.run_number }}
           # Change the below repository names accordingly
